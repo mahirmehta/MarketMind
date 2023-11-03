@@ -3,10 +3,10 @@ import openpyxl
 from openpyxl import load_workbook
 
 # Replace with your News API key
-NEWS_API_KEY = '3801820eb6014213b1cfa468a447d23a'
+NEWS_API_KEY = ' '
 
 # List of bank stock symbols you want to search for (both Indian and non-Indian banks)
-bank_symbols = ['HDFCBANK', 'ICICIBANK', 'AXISBANK', 'KOTAKBANK', 'PNB', 'YESBANK', 'BANKBARODA', 'INDUSINDBK', 'FEDERALBNK']
+bank_symbols = ['HDFCBANK', 'ICICIBANK', 'AXISBANK', 'KOTAKBANK', 'PNB', 'AUBANK', 'BANKBARODA', 'INDUSINDBK', 'FEDERALBNK', 'SBIN', 'BANDHANBNK','IDFCFIRSTB']
 
 # Load an existing Excel workbook or create a new one if it doesn't exist
 try:
@@ -20,6 +20,7 @@ except FileNotFoundError:
     worksheet['B1'] = 'Title'
     worksheet['C1'] = 'Description'
     worksheet['D1'] = 'URL'
+    worksheet['E1'] = 'Date and Time'
 
 # Find the last row in the Excel sheet to append new data
 row_num = worksheet.max_row + 1
@@ -40,12 +41,14 @@ for stock_symbol in bank_symbols:
             title = article.get('title', '')
             description = article.get('description', '')
             url = article.get('url', '')
+            published_at = article.get('publishedAt', '')
 
             # Write data to the Excel file
             worksheet[f'A{row_num}'] = stock_symbol
             worksheet[f'B{row_num}'] = title
             worksheet[f'C{row_num}'] = description
             worksheet[f'D{row_num}'] = url
+            worksheet[f'E{row_num}'] = published_at
 
             row_num += 1
     else:
