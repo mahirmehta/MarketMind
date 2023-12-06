@@ -3,14 +3,14 @@ import openpyxl
 from openpyxl import load_workbook
 
 # Replace with your News API key
-NEWS_API_KEY = ' '
+NEWS_API_KEY = '3801820eb6014213b1cfa468a447d23a '
 
 # List of bank stock symbols you want to search for (both Indian and non-Indian banks)
-bank_symbols = ['HDFCBANK', 'ICICIBANK', 'AXISBANK', 'KOTAKBANK', 'PNB', 'AUBANK', 'BANKBARODA', 'INDUSINDBK', 'FEDERALBNK', 'SBIN', 'BANDHANBNK','IDFCFIRSTB']
+bank_symbols = ['HDFCBANK']
 
 # Load an existing Excel workbook or create a new one if it doesn't exist
 try:
-    workbook = load_workbook('bank_stock_news.xlsx')
+    workbook = load_workbook('bank_stock_news1.xlsx')
     worksheet = workbook.active
 except FileNotFoundError:
     workbook = openpyxl.Workbook()
@@ -55,5 +55,7 @@ for stock_symbol in bank_symbols:
         print(f'Failed to fetch news for {stock_symbol}')
 
 # Save the updated Excel file
-workbook.save('bank_stock_news.xlsx')
+workbook.save('bank_stock_news1.xlsx')
 print('Bank stock news appended to bank_stock_news.xlsx')
+
+    
