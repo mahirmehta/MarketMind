@@ -1,0 +1,99 @@
+.team-container {
+    background-color: #242424;
+    padding: 61px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    height: auto;
+}
+  
+.teams {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+  
+.profile-image {
+    width: 140px;
+    height: 175px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin: 0 auto 10px;
+    display: block;
+}
+  
+.team {
+    width: 30%;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 60px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 40px;
+}
+  
+.team:hover {
+    transform: scale(1.05);
+}
+  
+.team a {
+    text-decoration: none;
+    color: #fff;
+}
+  
+.team h2 {
+    margin-bottom: 12px;
+    color: #ffd700;
+}
+  
+.team p {
+    font-size: 16px;
+}
+  
+.team .description {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 8px;
+}
+  
+@media screen and (max-width: 960px) {
+    .teams {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-image {
+        width: 40%; 
+        max-width: 100px; 
+        height: auto; 
+        border-radius: 10%; 
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .team {
+      width: 80%;
+    }
+}
+  
+@media screen and (max-width: 768px) {
+    .profile-image {
+        width: 50%; /* Adjust the percentage value as needed */
+        max-width: 100px; /* Set a maximum width if needed */
+        height: auto; /* Automatically adjust the height */
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    .team {
+      width: 100%;
+    }
+}
