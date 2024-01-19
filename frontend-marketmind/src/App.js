@@ -8,6 +8,8 @@ import Dashboard from './components/pages/Dashboard';
 import SignUp from './components/pages/SignUp';
 import Team from './components/pages/Team';
 import AboutUs from './components/pages/AboutUs';
+import General from './components/pages/General';
+import Support from './components/pages/Support';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route exact path='/sign-up' element={<SignUp />} />
           <Route exact path='/team' element={<Team />} />
           <Route exact path='/about-us-&-contact-us' element={<AboutUs />} />
+          <Route exact path='/general' element={<General />} />
+          <Route exact path='/support' element={<Support />} />
         </Routes>
       </Router>
     </>
