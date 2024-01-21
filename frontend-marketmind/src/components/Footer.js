@@ -31,14 +31,14 @@ function Footer() {
             <h2>Company</h2>
             <Link to='/about-us-&-contact-us'>About Us</Link>
             <Link to='/team'>Team MM</Link>
-            <Link to=''>Partners</Link>
+            <Link to='/partners'>Partners</Link>
             <Link to=''>Terms of Service</Link>
           </div>
           <div class='footer-link-items'>
             <h2>Contact</h2>
             <Link to='/about-us-&-contact-us'>Contact Us</Link>
             <Link to='/support'>Support</Link>
-            <Link to=''>Careers</Link>
+            <Link to='/careers'>Careers</Link>
             <Link to=''>Sponsorships</Link>
           </div>
         </div>
@@ -46,8 +46,8 @@ function Footer() {
           <div class='footer-link-items'>
             <h2>Learn</h2>
             <Link to='/general'>General</Link>
-            <Link to=''>Our Blogs</Link>
-            <Link to=''>Articles</Link>
+            <Link to='/mm-blogs'>MM Blogs</Link>
+            <Link to='/articles'>Articles</Link>
             <Link to=''>Resources</Link>
           </div>
           <div class='footer-link-items'>
