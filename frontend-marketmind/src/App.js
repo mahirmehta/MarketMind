@@ -10,6 +10,10 @@ import Team from './components/pages/Team';
 import AboutUs from './components/pages/AboutUs';
 import General from './components/pages/General';
 import Support from './components/pages/Support';
+import Partners from './components/pages/Partners';
+import Careers from './components/pages/Careers';
+import MMBlogs from './components/pages/MMBlogs';
+import Articles from './components/pages/Articles';
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
           <Route exact path='/about-us-&-contact-us' element={<AboutUs />} />
           <Route exact path='/general' element={<General />} />
           <Route exact path='/support' element={<Support />} />
+          <Route exact path='/partners' element={<Partners />} />          
+          <Route exact path='/careers' element={<Careers />} />
+          <Route exact path='/mm-blogs' element={<MMBlogs />} />
+          <Route exact path='/articles' element={<Articles />} />
         </Routes>
       </Router>
     </>
