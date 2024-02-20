@@ -1,0 +1,52 @@
+.about-us-container {
+    background-color: #242424;
+    padding: 2vw 6vw 2vw 6vw; 
+    text-align: justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+}
+  
+.about-us-container h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+  
+.about-us-container p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #fff;
+    font-size: 1rem;
+}
+  
+.contact-us-section {
+    margin-top: 30px;
+}
+  
+.contact-us-section p {
+    margin-bottom: 3px;
+    color: #fff;
+    font-size: 1rem;
+}
+  
+@media screen and (max-width: 960px) {
+    .about-us-container {
+      padding: 30px;
+    }
+}
+  
+@media screen and (max-width: 768px) {
+    .about-us-container {
+      padding: 20px;
+    }
+  
+    .about-us-container h1 {
+      font-size: 1.8rem;
+    }
+  
+    .about-us-container p {
+      font-size: 14px;
+    }
+}
+  
