@@ -3,7 +3,7 @@ import urllib.request
 import csv
 from datetime import datetime
 
-apikey = "7d43d02c68608ca45f7e8f46f050b342"
+apikey = " "
 
 # List of banks to search for
 banks = ['HDFC', 'SBI', 'ICICI', 'Kotak', 'IDFC', 'Axis']
