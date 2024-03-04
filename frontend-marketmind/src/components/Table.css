@@ -1,0 +1,31 @@
+.table-container {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.styled-table th,
+.styled-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #333;
+}
+
+.styled-table td.green {
+    color: green;
+}
+
+.styled-table td.red {
+    color: red;
+}
