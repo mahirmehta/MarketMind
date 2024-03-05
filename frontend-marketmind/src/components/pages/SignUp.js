@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom';
 import APIService from '../APIService';
 import './SignUp.css';
 
@@ -19,10 +19,23 @@ function SignUp() {
       ...prevState,
       [name]: value
     }));
+
+    // Password validation
+    if (name === 'password') {
+      const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
+      if (!regex.test(value)) {
+        setMessage('Password must contain at least 1 special character, 1 uppercase letter, 1 lowercase letter, and be at least 8 characters long.');
+      } else {
+        setMessage('');
+      }
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Check if there's an error message
+    if (message) return;
+
     APIService.RegisterUser(formData)
       .then(data => {
         console.log('Registration successful:', data);
@@ -44,9 +57,9 @@ function SignUp() {
         <input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} />
         <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
         <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} />
+        {message && <p className="error-message">{message}</p>}
         <button type="submit">Sign Up</button>
       </form>
-      {message && <p className="message">{message}</p>}
       <p>Already have an account? <Link to="/log-in">Log In</Link></p>
     </div>
   );

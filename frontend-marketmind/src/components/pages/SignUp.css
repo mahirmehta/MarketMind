@@ -22,6 +22,11 @@
     border: 1px solid #ccc;
 }
 
+.signup-page .error-message {
+    color: red; /* Set the color to red */
+    margin-top: 5px; /* Add some space between the input field and the error message */
+}
+
 .signup-page button {
     padding: 8px 12px;
     border: none;
