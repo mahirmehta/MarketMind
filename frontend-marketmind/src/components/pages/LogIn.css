@@ -4,53 +4,58 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
+}
   
-  .login-page h2 {
+.login-page h2 {
     text-align: center;
-  }
+}
   
-  .login-page form {
+.login-page form {
     display: flex;
     flex-direction: column;
-  }
+}
   
-  .login-page input {
+.login-page input {
     margin-bottom: 10px;
     padding: 8px;
     border-radius: 3px;
     border: 1px solid #ccc;
-  }
+}
+
+.login-page .error-message {
+    color: red;
+    margin-top: 2px;
+}
   
-  .login-page button {
+.login-page button {
     padding: 8px 12px;
     border: none;
     border-radius: 3px;
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
-  }
+}
   
-  .login-page button:hover {
+.login-page button:hover {
     background-color: #0056b3;
-  }
+}
   
-  .login-page .message {
+.login-page .message {
     margin-top: 10px;
     color: #333;
-  }
+}
   
-  .login-page p {
+.login-page p {
     margin-top: 10px;
     text-align: center;
-  }
+}
   
-  .login-page p a {
+.login-page p a {
     color: #007bff;
     text-decoration: none;
-  }
+}
   
-  .login-page p a:hover {
+.login-page p a:hover {
     text-decoration: underline;
-  }
+}
   

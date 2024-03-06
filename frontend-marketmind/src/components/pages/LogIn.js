@@ -24,10 +24,14 @@ function Login() {
     e.preventDefault();
     APIService.LoginUser(formData)
       .then(data => {
-        console.log('Login successful:', data);
-        setMessage('Login successful. Redirecting...');
-        // Handle successful login, redirect or show a success message
-        navigate('/dashboard');
+        if (data && data.token) {
+          console.log('Login successful:', data);
+          setMessage('Login successful. Redirecting...');
+          // Handle successful login, redirect or show a success message
+          navigate('/dashboard');
+        } else {
+          setMessage('Invalid username or password. Please try again.');
+        }
       })
       .catch(error => {
         console.error('Login failed:', error);
