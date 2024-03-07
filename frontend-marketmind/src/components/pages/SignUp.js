@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import APIService from '../APIService';
 import './SignUp.css';
 
-function SignUp({ isLoggedIn, handleLogin }) {
+function SignUp() {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
