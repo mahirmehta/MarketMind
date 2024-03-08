@@ -10,21 +10,23 @@
   cursor: pointer;
 }
 
-/* Button.css */
 .btn-mobile {
-  text-decoration: none; /* Remove underline */
+  text-decoration: none; 
 }
 
-/* Add this if you want to remove underline on hover */
 .btn-mobile:hover {
   text-decoration: none;
 }
-
 
 .btn--primary {
   background-color: var(--primary);
   color: #242424;
   border: 1px solid var(--primary);
+}
+
+.btn--logout {
+  background-color: black;
+  color: white;
 }
 
 .btn--outline {
@@ -33,12 +35,6 @@
   padding: 8px 20px;
   border: 1px solid var(--primary);
   transition: all 0.3s ease-out;
-}
-
-.btn--logout {
-  background-color: white;
-  color: black;
-  /* Add other styling properties as needed */
 }
 
 .btn--medium {
