@@ -50,26 +50,19 @@
     text-align: center;
 }
 
-.news ul {
-    list-style-type: none;
-    padding: 0;
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
 }
 
-.news li {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+.card h4 {
+    margin-top: 0;
 }
 
-.news li:last-child {
-    border-bottom: none;
-}
-
-.news h4 {
-    margin-bottom: 5px;
-}
-
-.news p {
-    color: #666;
+.card p {
+    margin-bottom: 0;
 }
 
 /* Responsive Layout */

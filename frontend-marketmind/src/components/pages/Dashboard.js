@@ -15,11 +15,9 @@ function Dashboard() {
   }, [selectedStock]);
 
   const fetchNews = (selectedStock) => {
-    // Assuming your CSV files are stored in a folder named 'data' 
-    fetch(`/src/components/2024/${selectedStock}_news.csv`)
+    fetch(`/components/2024/${selectedStock}_news.csv`)
       .then(response => response.text())
       .then(data => {
-        // Parse CSV data
         const parsedData = parseCSVData(data);
         setNews(parsedData);
       })
@@ -29,7 +27,6 @@ function Dashboard() {
   };
 
   const parseCSVData = (csvData) => {
-    // Split CSV data by line and parse it into objects
     const rows = csvData.split('\n');
     const parsedData = rows.map(row => {
       const [title, description] = row.split(',');
@@ -45,12 +42,7 @@ function Dashboard() {
   const handleStockChange = (event) => {
     const selected = event.target.value;
     setSelectedStock(selected);
-    // Here, you can fetch the relevant data for the selected stock
-    // and update the state to display information accordingly.
-    // For simplicity, I'll just set the stockInfo with the selected stock name.
     setStockInfo(selected);
-    // Assume sentiment graph data is fetched here
-    // For demonstration purposes, let's set some dummy data
     setSentimentGraph(`./images/${selected}-sentiment.jpg`);
   };
 
@@ -89,14 +81,12 @@ function Dashboard() {
           {/* Display news */}
           <div className="news">
             <h2>News:</h2>
-            <ul>
-              {news.map((item, index) => (
-                <li key={index}>
-                  <h4>{item.title}</h4>
-                  <p>{item.description}</p>
-                </li>
-              ))}
-            </ul>
+            {news.map((item, index) => (
+              <div key={index} className="card">
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       )}
