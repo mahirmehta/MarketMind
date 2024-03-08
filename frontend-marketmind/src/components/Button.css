@@ -10,10 +10,23 @@
   cursor: pointer;
 }
 
+.btn-mobile {
+  text-decoration: none; 
+}
+
+.btn-mobile:hover {
+  text-decoration: none;
+}
+
 .btn--primary {
   background-color: var(--primary);
   color: #242424;
   border: 1px solid var(--primary);
+}
+
+.btn--logout {
+  background-color: black;
+  color: white;
 }
 
 .btn--outline {

@@ -19,5 +19,4 @@ export default class APISerive {
             body:JSON.stringify(body)
         }).then(resp => resp.json())
     }    
-
 }
