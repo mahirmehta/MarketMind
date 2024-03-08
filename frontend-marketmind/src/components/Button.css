@@ -10,6 +10,17 @@
   cursor: pointer;
 }
 
+/* Button.css */
+.btn-mobile {
+  text-decoration: none; /* Remove underline */
+}
+
+/* Add this if you want to remove underline on hover */
+.btn-mobile:hover {
+  text-decoration: none;
+}
+
+
 .btn--primary {
   background-color: var(--primary);
   color: #242424;

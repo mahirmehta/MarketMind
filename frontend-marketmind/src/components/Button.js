@@ -19,13 +19,14 @@ export const Button = ({
   type,
   onClick,
   buttonStyle,
-  buttonSize
+  buttonSize,
+  to // New 'to' prop for specifying the destination
 }) => {
   const checkButtonStyle = STYLES[buttonStyle] || STYLES.primary;
   const checkButtonSize = SIZES[buttonSize] || SIZES.medium;
 
   return (
-    <Link to='/sign-up' className='btn-mobile'>
+    <Link to={to} className='btn-mobile'> {/* Use 'to' prop for Link destination */}
       <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
         onClick={onClick}
