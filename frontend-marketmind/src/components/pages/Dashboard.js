@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../App.css';
+import './Dashboard.css';
 import Footer from '../Footer';
 
 function Dashboard() {
