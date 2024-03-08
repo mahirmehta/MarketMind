@@ -3,7 +3,7 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-function Navbar({ isLoggedIn, handleLogout }) {
+function Navbar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 
@@ -22,18 +22,13 @@ function Navbar({ isLoggedIn, handleLogout }) {
         showButton();
     }, []);
 
-    useEffect(() => {
-        // Check if user is logged in and update the button accordingly
-        if (isLoggedIn) {
-            setButton(false); // Hide Sign Up button if user is logged in
-        }
-    }, [isLoggedIn]);
+    window.addEventListener('resize', showButton);
 
     return (
         <>
-            <nav className="navbar">
-                <div className="navbar-container">
-                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            <nav className='navbar'>
+                <div className='navbar-container'>
+                    <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                         MarketMind
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
@@ -63,27 +58,22 @@ function Navbar({ isLoggedIn, handleLogout }) {
                                 About Us
                             </Link>
                         </li>
-                        {isLoggedIn ? (
-                            <li className='nav-item'>
-                                <Button buttonStyle="btn--logout" onClick={handleLogout}>Log Out</Button>
-                            </li>
-                        ) : (
-                            <li className='nav-item'>
-                                <Link
-                                    to='/sign-up'
-                                    className='nav-links-mobile'
-                                    onClick={closeMobileMenu}
-                                >
-                                    Sign up
-                                </Link>
-                            </li>
-                        )}
+
+                        <li>
+                            <Link
+                                to='/sign-up'
+                                className='nav-links-mobile'
+                                onClick={closeMobileMenu}
+                            >
+                                Sign Up
+                            </Link>
+                        </li>
                     </ul>
-                    {button && !isLoggedIn && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                    {button && <Button to='/sign-up' buttonStyle='btn--outline'>SIGN UP</Button>}
                 </div>
             </nav>
         </>
-    )
+    );
 }
 
 export default Navbar;
