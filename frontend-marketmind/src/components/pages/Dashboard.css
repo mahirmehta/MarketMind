@@ -17,6 +17,7 @@
 
 .dashboard-container {
     padding: 60px;
+    background-color: white;
 }
 
 .select {
@@ -32,9 +33,10 @@
 }
 
 .stock-images img {
-    width: 500px;
+    width: 600px;
+    /* height: 300px; */
     height: auto;
-    margin: 10px;
+    margin: 5px;
 }
 
 .sentiment-graph img {
