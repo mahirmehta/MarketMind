@@ -15,7 +15,7 @@ function Dashboard() {
   }, [selectedStock]);
 
   const fetchNews = (selectedStock) => {
-    fetch(`/components/2024/${selectedStock}_news.csv`)
+    fetch(`/data/${selectedStock}_news.csv`)
       .then(response => response.text())
       .then(data => {
         const parsedData = parseCSVData(data);
