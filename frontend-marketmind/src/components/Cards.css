@@ -1,10 +1,10 @@
 .services-container {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 60px ; 
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 60px;
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
-    color: #fff;
+  color: #fff;
 }
 
 .services {
@@ -23,20 +23,20 @@
 }
 
 .service i.logo {
-  font-size: 36px; 
-  margin-bottom: 10px; 
-  color: #fff; 
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #fff;
 }
-  
+
 .service h2 {
   margin-bottom: 18px;
   color: #ffd700;
 }
-  
+
 .service p {
   font-size: 17px;
 }
-  
+
 @media screen and (max-width: 960px) {
   .services {
     flex-direction: column;
@@ -48,7 +48,7 @@
     margin-bottom: 20px;
   }
 }
-  
+
 @media screen and (max-width: 768px) {
   .services {
     flex-direction: column;
