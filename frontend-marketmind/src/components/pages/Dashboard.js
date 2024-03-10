@@ -29,8 +29,8 @@ function Dashboard() {
   const parseCSVData = (csvData) => {
     const rows = csvData.split('\n');
     const parsedData = rows.map(row => {
-      const [title, description] = row.split(',');
-      return { title, description };
+      const [bank,title, description] = row.split(',');
+      return { bank,title, description };
     });
     // Remove header row if present
     if (parsedData.length > 0 && parsedData[0].title === 'Title') {
@@ -82,16 +82,17 @@ function Dashboard() {
           <div className="news">
             <h2>News:</h2>
             
-            {news.slice(1,7).map((item, index) => (
+            {news.slice(0,7).map((item, index) => (
               <div key={index} className="card">
+                <h3>{item.bank}</h3>
                 <h4>{item.title}</h4>
-                <p>{item.description}</p>
+                <p>{item.description}</p> 
               </div>
             ))}
           </div>
         </div>
       )}
-      <Footer />
+      <Footer/>
     </div>
   );
 }
