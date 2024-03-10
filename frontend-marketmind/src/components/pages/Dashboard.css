@@ -34,7 +34,6 @@
 
 .stock-images img {
     width: 600px;
-    /* height: 300px; */
     height: auto;
     margin: 5px;
 }
@@ -74,5 +73,15 @@
     .stock-images {
         flex-direction: column;
         align-items: center;
+    }
+
+    .dropdown-container select {
+        width: 100%;
+        max-width: none;
+    }
+
+    .stock-images img {
+        width: 90%;
+        /* Adjust as needed */
     }
 }
