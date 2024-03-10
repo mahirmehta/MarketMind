@@ -89,7 +89,7 @@ function Dashboard() {
               <div key={index} className="card">
                 <h3>{item.Bank}</h3>
                 <h4>{item.Title}</h4>
-                <p>{item.Description}</p> 
+                <h5>{item.Description}</h5> 
               </div>
             ))}
           </div>
