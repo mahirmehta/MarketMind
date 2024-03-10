@@ -56,17 +56,22 @@
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 16px;
-
-    /* Remove height constraints */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .card h4 {
     margin-top: 0;
+    color: #333; /* Darken the title color */
+    font-size: 1.2rem; /* Increase title font size */
 }
 
 .card p {
     margin-bottom: 0;
+    color: #666; /* Darken the description color */
+    line-height: 1.5; /* Increase line height for better readability */
 }
+
 
 /* Responsive Layout */
 @media (max-width: 768px) {

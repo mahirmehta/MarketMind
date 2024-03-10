@@ -87,7 +87,7 @@ function Dashboard() {
             
             {news.slice(0,7).map((item, index) => (
               <div key={index} className="card">
-                <h3>{item.Bank}</h3>
+                {/* <h3>{item.Bank}</h3> */}
                 <h4>{item.Title}</h4>
                 <h5>{item.Description}</h5> 
               </div>
