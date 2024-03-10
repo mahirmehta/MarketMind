@@ -48,15 +48,17 @@
     margin-top: 20px;
 }
 
-.news h3 {
+/* .news h3 {
     text-align: center;
-}
+} */
 
 .card {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 16px;
+    
+    /* Remove height constraints */
 }
 
 .card h4 {

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Dashboard.css';
 import Footer from '../Footer';
+import Papa from 'papaparse';
+
 
 function Dashboard() {
   const [selectedStock, setSelectedStock] = useState('');
@@ -27,18 +29,19 @@ function Dashboard() {
   };
 
   const parseCSVData = (csvData) => {
-    const rows = csvData.split('\n');
-    const parsedData = rows.map(row => {
-      const [title, description] = row.split(',');
-      return { title, description };
+    const parsedData = Papa.parse(csvData, {
+      header: true,
+      delimiter: ',',
+      dynamicTyping: true,
+      transform: (value, { header }) => {
+        if (header === 'Description') {
+          return value.replace(/"/g, ''); // Remove double quotes from the description
+        }
+        return value;
+      }
     });
-    // Remove header row if present
-    if (parsedData.length > 0 && parsedData[0].title === 'Title') {
-      parsedData.shift();
-    }
-    return parsedData;
+    return parsedData.data;
   };
-
   const handleStockChange = (event) => {
     const selected = event.target.value;
     setSelectedStock(selected);
@@ -75,22 +78,24 @@ function Dashboard() {
           <h2>Sentiments:</h2>
           {sentimentGraph && (
             <div className="sentiment-graph">
-              <img src={`/images/sentiment.${stockInfo}.NS.png`} alt="Sentiment Graph" />
+              <img src={`/images/SG.${stockInfo}.NS.png`} alt="Sentiment Graph" />
             </div>
           )}
           {/* Display news */}
           <div className="news">
             <h2>News:</h2>
-            {news.map((item, index) => (
+            
+            {news.slice(0,7).map((item, index) => (
               <div key={index} className="card">
-                <h4>{item.title}</h4>
-                <p>{item.description}</p>
+                <h3>{item.Bank}</h3>
+                <h4>{item.Title}</h4>
+                <h5>{item.Description}</h5> 
               </div>
             ))}
           </div>
         </div>
       )}
-      <Footer />
+      <Footer/>
     </div>
   );
 }
