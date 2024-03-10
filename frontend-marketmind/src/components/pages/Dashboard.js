@@ -75,13 +75,14 @@ function Dashboard() {
           <h2>Sentiments:</h2>
           {sentimentGraph && (
             <div className="sentiment-graph">
-              <img src={`/images/sentiment.${stockInfo}.NS.png`} alt="Sentiment Graph" />
+              <img src={`/images/SG.${stockInfo}.NS.png`} alt="Sentiment Graph" />
             </div>
           )}
           {/* Display news */}
           <div className="news">
             <h2>News:</h2>
-            {news.map((item, index) => (
+            
+            {news.slice(1,7).map((item, index) => (
               <div key={index} className="card">
                 <h4>{item.title}</h4>
                 <p>{item.description}</p>
