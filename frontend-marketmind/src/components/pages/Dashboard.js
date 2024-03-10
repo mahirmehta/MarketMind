@@ -83,19 +83,19 @@ function Dashboard() {
           )}
           {/* Display news */}
           <div className="news">
-            <h2>News:</h2>
-            
-            {news.slice(0,7).map((item, index) => (
+            <h2>News Headlines:</h2>
+
+            {news.slice(0, 7).map((item, index) => (
               <div key={index} className="card">
                 {/* <h3>{item.Bank}</h3> */}
                 <h4>{item.Title}</h4>
-                <h5>{item.Description}</h5> 
+                <h5>{item.Description}</h5>
               </div>
             ))}
           </div>
         </div>
       )}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
