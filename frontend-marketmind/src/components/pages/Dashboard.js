@@ -75,7 +75,7 @@ function Dashboard() {
           </div>
           {/* Display sentiment graph */}
           <br />
-          <h2>Sentiments:</h2>
+          <h2>Market Sentiments:</h2>
           {sentimentGraph && (
             <div className="sentiment-graph">
               <img src={`/images/SG.${stockInfo}.NS.png`} alt="Sentiment Graph" />
@@ -88,8 +88,8 @@ function Dashboard() {
             {news.slice(0, 7).map((item, index) => (
               <div key={index} className="card">
                 {/* <h3>{item.Bank}</h3> */}
-                <h4>{item.Title}</h4>
-                <h5>{item.Description}</h5>
+                <h3>{item.Title}</h3>
+                <p>{item.Description}</p>
               </div>
             ))}
           </div>

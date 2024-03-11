@@ -35,12 +35,15 @@
 .stock-images img {
     width: 600px;
     height: auto;
-    margin: 5px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .sentiment-graph img {
-    max-width: 100%;
+    max-width: 30%;
     margin-top: 20px;
+    margin-left: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .news {
@@ -56,20 +59,26 @@
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 16px;
-    background-color: #f9f9f9; /* Light background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: #f9f9f9;
+    /* Light background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
 }
 
 .card h4 {
     margin-top: 0;
-    color: #333; /* Darken the title color */
-    font-size: 1.2rem; /* Increase title font size */
+    color: #333;
+    /* Darken the title color */
+    font-size: 1.2rem;
+    /* Increase title font size */
 }
 
 .card p {
     margin-bottom: 0;
-    color: #666; /* Darken the description color */
-    line-height: 1.5; /* Increase line height for better readability */
+    color: #666;
+    /* Darken the description color */
+    line-height: 1.5;
+    /* Increase line height for better readability */
 }
 
 
