@@ -98,4 +98,11 @@
         width: 90%;
         /* Adjust as needed */
     }
+
+    .sentiment-graph img {
+        max-width: 60%;
+        margin-top: 20px;
+        margin-left: 50px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
 }
