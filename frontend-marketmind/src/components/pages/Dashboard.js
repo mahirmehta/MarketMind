@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Dashboard.css';
 import Footer from '../Footer';
 import Papa from 'papaparse';
-
 
 function Dashboard() {
   const [selectedStock, setSelectedStock] = useState('');
@@ -10,13 +9,7 @@ function Dashboard() {
   const [sentimentGraph, setSentimentGraph] = useState(null);
   const [news, setNews] = useState([]);
 
-  useEffect(() => {
-    if (selectedStock) {
-      fetchNews(selectedStock);
-    }
-  }, [selectedStock]);
-
-  const fetchNews = (selectedStock) => {
+  const fetchNews = useCallback((selectedStock) => {
     fetch(`/data/${selectedStock}_news.csv`)
       .then(response => response.text())
       .then(data => {
@@ -26,7 +19,13 @@ function Dashboard() {
       .catch(error => {
         console.error('Error fetching news:', error);
       });
-  };
+  }, []);
+
+  useEffect(() => {
+    if (selectedStock) {
+      fetchNews(selectedStock);
+    }
+  }, [selectedStock, fetchNews]);
 
   const parseCSVData = (csvData) => {
     const parsedData = Papa.parse(csvData, {
@@ -42,6 +41,7 @@ function Dashboard() {
     });
     return parsedData.data;
   };
+
   const handleStockChange = (event) => {
     const selected = event.target.value;
     setSelectedStock(selected);
@@ -86,7 +86,6 @@ function Dashboard() {
             <h2>News Headlines:</h2>
             {news.slice(0, 7).map((item, index) => (
               <div key={index} className="card">
-                {/* <h3>{item.Bank}</h3> */}
                 <h3>{item.Title}</h3>
                 <p>{item.Description}</p>
               </div>
