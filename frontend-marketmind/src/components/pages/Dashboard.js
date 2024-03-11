@@ -84,7 +84,6 @@ function Dashboard() {
           {/* Display news */}
           <div className="news">
             <h2>News Headlines:</h2>
-
             {news.slice(0, 7).map((item, index) => (
               <div key={index} className="card">
                 {/* <h3>{item.Bank}</h3> */}
