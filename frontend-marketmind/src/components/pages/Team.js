@@ -7,21 +7,21 @@ const teamMembers = [
     linkedin: 'https://www.linkedin.com/in/omkar-kubal-686019265/',
     image: 'images/omkar.png',
     id: '16010120025',
-    description: 'Lead Developer',
+    description: 'Team Member',
   },
   {
     name: 'MAHIR MEHTA',
     linkedin: 'https://www.linkedin.com/in/mahir-mehta/',
     image: 'images/mahir.jpeg',
     id: '16010120029',
-    description: 'Lead Developer',
+    description: 'Team Member',
   },
   {
     name: 'SOHAM SHAH',
     linkedin: 'https://www.linkedin.com/in/soham-shah-95411921a/',
     image: 'images/soham.jpeg',
     id: '16010120046',
-    description: 'Lead Developer',
+    description: 'Team Member',
   },
 ];
 
