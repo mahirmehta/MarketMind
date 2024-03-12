@@ -84,6 +84,44 @@
     /* Increase line height for better readability */
 }
 
+.predictions {
+    margin-top: 20px;
+}
+
+.predictions h2 {
+    text-align: justify;
+}
+
+.predictions p {
+    color: #666;
+}
+
+.predictions table {
+    width: 60%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.predictions th,
+.predictions td {
+    padding: 7px;
+    border: 1px solid #ccc;
+}
+
+.predictions th {
+    background-color: #afacac;
+    font-weight: bold;
+    text-align: center;
+}
+
+.predictions tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.predictions tbody tr:hover {
+    background-color: #e6e6e6;
+}
 
 /* Responsive Layout */
 @media (max-width: 768px) {
@@ -107,5 +145,9 @@
         margin-top: 20px;
         margin-left: 50px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .predictions table {
+        width: 80%;
     }
 }

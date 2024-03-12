@@ -8,6 +8,8 @@ function Dashboard() {
   const [stockInfo, setStockInfo] = useState(null);
   const [sentimentGraph, setSentimentGraph] = useState(null);
   const [news, setNews] = useState([]);
+  const [predictions, setPredictions] = useState([]);
+  const [currentDateIndex, setCurrentDateIndex] = useState(-1);
 
   const fetchNews = useCallback((selectedStock) => {
     fetch(`/data/${selectedStock}_news.csv`)
@@ -21,11 +23,32 @@ function Dashboard() {
       });
   }, []);
 
+  const fetchPredictions = useCallback((selectedStock) => {
+    fetch(`/data/merged.${selectedStock}.data.csv`)
+      .then(response => response.text())
+      .then(data => {
+        const parsedData = parseCSVData(data);
+        setPredictions(parsedData);
+      })
+      .catch(error => {
+        console.error('Error fetching predictions:', error);
+      });
+  }, []);
+
   useEffect(() => {
     if (selectedStock) {
       fetchNews(selectedStock);
+      fetchPredictions(selectedStock);
     }
-  }, [selectedStock, fetchNews]);
+  }, [selectedStock, fetchNews, fetchPredictions]);
+
+  useEffect(() => {
+    if (predictions.length > 0) {
+      const today = getFormattedDate();
+      const index = predictions.findIndex(prediction => prediction.Date === today);
+      setCurrentDateIndex(index);
+    }
+  }, [predictions]);
 
   const parseCSVData = (csvData) => {
     const parsedData = Papa.parse(csvData, {
@@ -47,6 +70,14 @@ function Dashboard() {
     setSelectedStock(selected);
     setStockInfo(selected);
     setSentimentGraph(`./images/${selected}-sentiment.jpg`);
+  };
+
+  const getFormattedDate = () => {
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yyyy = today.getFullYear();
+    return `${dd}-${mm}-${yyyy}`;
   };
 
   return (
@@ -81,6 +112,31 @@ function Dashboard() {
               <img src={`/images/SG.${stockInfo}.NS.png`} alt="Sentiment Graph" />
             </div>
           )}
+          {/* Display predictions table */}
+          <div className="predictions">
+            <h2>Predictions for Next 7 Days:</h2>
+            <p>Today's Date: {getFormattedDate()}</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>ARIMA close price</th>
+                  <th>LSTM close price</th>
+                  <th>SARIMA close price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {currentDateIndex !== -1 && predictions.slice(currentDateIndex, currentDateIndex + 7).map((item, index) => (
+                  <tr key={index}>
+                    <td>{item.Date}</td>
+                    <td>{item.Arima_Close}</td>
+                    <td>{item.Lstm_Close}</td>
+                    <td>{item.Sarima_Close}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
           {/* Display news */}
           <div className="news">
             <h2>News Headlines:</h2>
