@@ -1,6 +1,7 @@
 .dashboard {
     text-align: center;
     color: #333;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .dropdown-container {
@@ -13,11 +14,13 @@
     height: 50px;
     padding: 10px;
     font-size: 18px;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .dashboard-container {
     padding: 60px;
     background-color: white;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .select {
