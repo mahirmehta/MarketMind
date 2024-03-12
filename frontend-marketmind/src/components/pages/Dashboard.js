@@ -114,7 +114,7 @@ function Dashboard() {
           )}
           {/* Display predictions table */}
           <div className="predictions">
-            <h2>Predictions for Next 7 Days:</h2>
+            <h2>Prediction for Next 7 Days:</h2>
             <p>Today's Date: {getFormattedDate()}</p>
             <table>
               <thead>
