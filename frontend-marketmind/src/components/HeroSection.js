@@ -19,10 +19,11 @@ function HeroSection() {
           Get Started
         </Button>
         <Button
-          to='/'
+          to='https://github.com/mahirmehta/MarketMind/assets/74295910/4272b5ae-63da-4dc3-8638-1a48f558723c'
           className='btns'
           buttonStyle='btn--primary'
           buttonSize='btn--large'
+          
           onClick={console.log('hey')}
         >
           How it works <i className='far fa-play-circle' />
