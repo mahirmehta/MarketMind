@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer';
 import './Team.css';
 
 const teamMembers = [
@@ -47,6 +48,7 @@ function Team() {
           <TeamMember key={member.id} {...member} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
