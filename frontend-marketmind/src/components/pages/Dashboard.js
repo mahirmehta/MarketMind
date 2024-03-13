@@ -107,6 +107,7 @@ function Dashboard() {
           {/* Display sentiment graph */}
           <br />
           <h2>Market Sentiments:</h2>
+          <p>Bank: {stockInfo}</p>
           {sentimentGraph && (
             <div className="sentiment-graph">
               <img src={`/images/SG.${stockInfo}.NS.png`} alt="Sentiment Graph" />
