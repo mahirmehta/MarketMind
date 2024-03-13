@@ -114,7 +114,7 @@ function Dashboard() {
           )}
           {/* Display predictions table */}
           <div className="predictions">
-            <h2>Prediction for Next 7 Days:</h2>
+            <h2>Prediction:</h2>
             <p>Today's Date: {getFormattedDate()}</p>
             <table>
               <thead>
@@ -126,7 +126,7 @@ function Dashboard() {
                 </tr>
               </thead>
               <tbody>
-                {currentDateIndex !== -1 && predictions.slice(currentDateIndex, currentDateIndex + 7).map((item, index) => (
+                {currentDateIndex !== -1 && predictions.slice(currentDateIndex-7, currentDateIndex + 7).map((item, index) => (
                   <tr key={index}>
                     <td>{item.Date}</td>
                     <td>{item.Arima_Close}</td>
