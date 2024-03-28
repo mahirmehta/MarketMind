@@ -99,10 +99,10 @@ function Dashboard() {
           <h2>Selected Stock: {stockInfo}</h2>
           {/* Display stock images */}
           <div className="stock-images">
-            <img src={`/images/CP.${stockInfo}.NS.png`} alt="Chart 1" />
-            <img src={`/images/lstm.${stockInfo}.NS.png`} alt="Chart 2" />
-            <img src={`/images/arima.${stockInfo}.NS.png`} alt="Chart 3" />
-            <img src={`/images/sarima.${stockInfo}.NS.png`} alt="Chart 4" />
+            <img src={`/images/CP_${stockInfo}.NS.png`} alt="Chart 1" />
+            <img src={`/images/lstm_${stockInfo}.NS.png`} alt="Chart 2" />
+            <img src={`/images/arima_${stockInfo}.NS.png`} alt="Chart 3" />
+            <img src={`/images/sarima_${stockInfo}.NS.png`} alt="Chart 4" />
           </div>
           {/* Display sentiment graph */}
           <br />
