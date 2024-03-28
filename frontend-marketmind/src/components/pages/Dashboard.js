@@ -127,7 +127,7 @@ function Dashboard() {
                 </tr>
               </thead>
               <tbody>
-                {currentDateIndex !== -1 && predictions.slice(currentDateIndex-7, currentDateIndex + 7).map((item, index) => (
+                {currentDateIndex !== -1 && predictions.slice(currentDateIndex - 7, currentDateIndex + 7).map((item, index) => (
                   <tr key={index}>
                     <td>{item.Date}</td>
                     <td>{item.Arima_Close}</td>

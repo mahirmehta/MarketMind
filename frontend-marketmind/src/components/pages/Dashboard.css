@@ -1,6 +1,12 @@
+body {
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+}
+
 .dashboard {
     text-align: center;
-    color: #333;
+    color: white;
     font-family: 'PT Sans', sans-serif;
 }
 
@@ -19,7 +25,7 @@
 
 .dashboard-container {
     padding: 60px;
-    background-color: white;
+    color: white;
     font-family: 'PT Sans', sans-serif;
 }
 
@@ -39,7 +45,7 @@
     width: 600px;
     height: auto;
     margin: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); */
 }
 
 .sentiment-graph img {
@@ -58,11 +64,11 @@
 } */
 
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid #666464;
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 16px;
-    background-color: #f9f9f9;
+    background-color: #666464;
     /* Light background color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     /* Add a subtle shadow */
@@ -78,7 +84,7 @@
 
 .card p {
     margin-bottom: 0;
-    color: #666;
+    color: #2c2b2b;
     /* Darken the description color */
     line-height: 1.5;
     /* Increase line height for better readability */
@@ -93,7 +99,7 @@
 }
 
 .predictions p {
-    color: #666;
+    color: rgb(162, 161, 161);
 }
 
 .predictions table {
@@ -106,17 +112,17 @@
 .predictions th,
 .predictions td {
     padding: 7px;
-    border: 1px solid #ccc;
+    border: 1px solid #666;
 }
 
 .predictions th {
-    background-color: #afacac;
+    background-color: #525050;
     font-weight: bold;
     text-align: center;
 }
 
 .predictions tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #565555;
 }
 
 .predictions tbody tr:hover {
