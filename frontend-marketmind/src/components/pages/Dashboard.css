@@ -1,12 +1,14 @@
 body {
-    background-color: #333;
+    background-color: #242424;
+    /* Dark background color */
     margin: 0;
     padding: 0;
 }
 
 .dashboard {
     text-align: center;
-    color: white;
+    color: #ffffff;
+    /* White text color */
     font-family: 'PT Sans', sans-serif;
 }
 
@@ -21,11 +23,20 @@ body {
     padding: 10px;
     font-size: 18px;
     font-family: 'PT Sans', sans-serif;
+    background-color: #2d2d2d;
+    /* Darker dropdown background color */
+    color: #ffffff;
+    /* White text color */
+    border: 1px solid #333333;
+    /* Dark border */
+    border-radius: 8px;
+    /* Rounded corners */
 }
 
 .dashboard-container {
     padding: 60px;
-    color: white;
+    color: #ffffff;
+    /* White text color */
     font-family: 'PT Sans', sans-serif;
 }
 
@@ -45,7 +56,12 @@ body {
     width: 600px;
     height: auto;
     margin: 10px;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); */
+    border: 1px solid #333333;
+    /* Dark border */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    /* Shadow */
 }
 
 .sentiment-graph img {
@@ -59,35 +75,31 @@ body {
     margin-top: 20px;
 }
 
-/* .news h3 {
-    text-align: center;
-} */
-
 .card {
-    border: 1px solid #666464;
+    border: 1px solid #333333;
+    /* Dark border */
     border-radius: 8px;
+    /* Rounded corners */
     padding: 16px;
     margin-bottom: 16px;
-    background-color: #666464;
-    /* Light background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Add a subtle shadow */
+    background-color: #2d2d2d;
+    /* Darker background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    /* Shadow */
 }
 
 .card h4 {
     margin-top: 0;
-    color: #333;
-    /* Darken the title color */
+    color: #ffffff;
+    /* White text color */
     font-size: 1.2rem;
-    /* Increase title font size */
 }
 
 .card p {
     margin-bottom: 0;
-    color: #2c2b2b;
-    /* Darken the description color */
+    color: #bfbfbf;
+    /* Light text color */
     line-height: 1.5;
-    /* Increase line height for better readability */
 }
 
 .predictions {
@@ -99,7 +111,8 @@ body {
 }
 
 .predictions p {
-    color: rgb(162, 161, 161);
+    color: #bfbfbf;
+    /* Light text color */
 }
 
 .predictions table {
@@ -112,21 +125,27 @@ body {
 .predictions th,
 .predictions td {
     padding: 7px;
-    border: 1px solid #666;
+    border: 1px solid #333333;
+    /* Dark border */
 }
 
 .predictions th {
-    background-color: #525050;
+    background-color: #333333;
+    /* Dark background color */
     font-weight: bold;
+    color: #ffffff;
+    /* White text color */
     text-align: center;
 }
 
 .predictions tbody tr:nth-child(even) {
-    background-color: #565555;
+    background-color: #333333;
+    /* Dark background color */
 }
 
 .predictions tbody tr:hover {
-    background-color: #e6e6e6;
+    background-color: #444444;
+    /* Slightly lighter background color on hover */
 }
 
 /* Responsive Layout */
@@ -143,7 +162,6 @@ body {
 
     .stock-images img {
         width: 90%;
-        /* Adjust as needed */
     }
 
     .sentiment-graph img {

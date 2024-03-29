@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './Dashboard.css';
-import Footer from '../Footer';
 import Papa from 'papaparse';
 
 function Dashboard() {
@@ -150,7 +149,6 @@ function Dashboard() {
           </div>
         </div>
       )}
-      <Footer />
     </div>
   );
 }
