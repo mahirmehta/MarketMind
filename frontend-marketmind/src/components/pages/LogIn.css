@@ -1,65 +1,89 @@
-body {
-    background-color: white;
-}
-
 .login-page {
     width: 300px;
-    margin: 0 auto;
+    margin: 50px auto;
+    /* Center the login page vertically and horizontally */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #f9f9f9;
+    /* Light background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
 }
-  
+
 .login-page h2 {
     text-align: center;
+    margin-bottom: 20px;
+    /* Add some space below the heading */
+    color: #333;
+    /* Dark text color */
 }
-  
+
 .login-page form {
     display: flex;
     flex-direction: column;
 }
-  
+
 .login-page input {
-    margin-bottom: 10px;
-    padding: 8px;
+    margin-bottom: 15px;
+    /* Increase space between input fields */
+    padding: 10px;
+    /* Increase padding */
     border-radius: 3px;
     border: 1px solid #ccc;
+    transition: border-color 0.3s;
+    /* Add transition effect for better interaction */
+}
+
+.login-page input:focus {
+    outline: none;
+    /* Remove outline on focus */
+    border-color: #007bff;
+    /* Change border color on focus */
 }
 
 .login-page .error-message {
     color: red;
-    margin-top: 2px;
+    margin-top: 5px;
+    /* Adjust margin */
 }
-  
+
 .login-page button {
-    padding: 8px 12px;
+    padding: 10px 20px;
+    /* Increase padding */
     border: none;
     border-radius: 3px;
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s;
+    /* Add transition effect */
 }
-  
+
 .login-page button:hover {
     background-color: #0056b3;
 }
-  
+
 .login-page .message {
-    margin-top: 10px;
+    margin-top: 15px;
+    /* Adjust margin */
     color: #333;
-}
-  
-.login-page p {
-    margin-top: 10px;
     text-align: center;
 }
-  
+
+.login-page p {
+    margin-top: 15px;
+    /* Adjust margin */
+    text-align: center;
+    font-size: 14px;
+    /* Reduce font size */
+}
+
 .login-page p a {
     color: #007bff;
     text-decoration: none;
 }
-  
+
 .login-page p a:hover {
     text-decoration: underline;
 }
-  
