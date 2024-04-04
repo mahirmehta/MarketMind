@@ -148,6 +148,11 @@ body {
     /* Slightly lighter background color on hover */
 }
 
+/* Targeting the Average price (MA) column */
+.predictions td.average-column {
+    color: #4ab0db;
+}
+
 /* Responsive Layout */
 @media (max-width: 768px) {
     .stock-images {

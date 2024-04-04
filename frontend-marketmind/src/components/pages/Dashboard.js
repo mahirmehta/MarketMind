@@ -123,6 +123,7 @@ function Dashboard() {
                   <th>ARIMA close price</th>
                   <th>LSTM close price</th>
                   <th>SARIMA close price</th>
+                  <th className="average-column">Average price (MA)</th> {/* Add className here */}
                 </tr>
               </thead>
               <tbody>
@@ -132,6 +133,7 @@ function Dashboard() {
                     <td>{item.Arima_Close}</td>
                     <td>{item.Lstm_Close}</td>
                     <td>{item.Sarima_Close}</td>
+                    <td className="average-column">{item.Average_Close}</td> {/* Add className here */}
                   </tr>
                 ))}
               </tbody>
