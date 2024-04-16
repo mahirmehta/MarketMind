@@ -3,7 +3,7 @@ import openpyxl
 from openpyxl import load_workbook
 
 # Replace with your News API key
-NEWS_API_KEY = '3801820eb6014213b1cfa468a447d23a '
+NEWS_API_KEY = ''
 
 # List of bank stock symbols you want to search for (both Indian and non-Indian banks)
 bank_symbols = ['HDFCBANK']
