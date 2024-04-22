@@ -105,6 +105,15 @@ function Dashboard() {
           </div>
           {/* Display sentiment graph */}
           <br />
+          <h2>Trendline Analysis:</h2>
+          <p>Bank: {stockInfo}</p>
+          {sentimentGraph && (
+            <div className="trendline-graph">
+              <img src={`/images/tr.${stockInfo}.NS.png`} alt="Trendline Graph" />
+            </div>
+          )}
+          {/* Display sentiment graph */}
+          <br />
           <h2>Market Sentiments:</h2>
           <p>Bank: {stockInfo}</p>
           {sentimentGraph && (
