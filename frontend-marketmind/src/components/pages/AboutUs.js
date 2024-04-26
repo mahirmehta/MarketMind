@@ -7,15 +7,12 @@ function AboutUs() {
       <h1>About Us</h1>
       <p>
         MarketMind is dedicated to providing a comprehensive approach to stock market prediction
-        using real-time social media analysis, volume and open interest, and market depth analysis.
-        Our predictive model aims to forecast market movements, specifically identifying gap up or
-        gap down scenarios.
+        using social media analysis and trendline analysis.
+        Our predictive model aims to forecast market movements.
+        Leveraging the power of social media data, we analyze sentiments to gauge market
+        trends.
       </p>
-      <p>
-        Leveraging the power of social media data, we analyze real-time sentiments to gauge market
-        trends. Additionally, we utilize Volume and Open Interest (OI) to make predictions and
-        incorporate market depth analysis to further refine our market forecasts.
-      </p>
+
       <p>
         At MarketMind, we are committed to staying at the forefront of technological advancements
         and data analysis techniques to provide accurate and timely insights for informed

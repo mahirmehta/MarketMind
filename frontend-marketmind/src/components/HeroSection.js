@@ -19,7 +19,7 @@ function HeroSection() {
           Get Started
         </Button>
         <Button
-          to='https://github.com/mahirmehta/MarketMind/assets/74295910/4272b5ae-63da-4dc3-8638-1a48f558723c'
+          to='https://github.com/mahirmehta/MarketMind/assets/74295910/ee8be3c9-466a-482b-9bc6-de6ad6b0eef4'
           className='btns'
           buttonStyle='btn--primary'
           buttonSize='btn--large'
