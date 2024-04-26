@@ -112,15 +112,6 @@ function Dashboard() {
               <img src={`/images/tr.${stockInfo}.NS.png`} alt="Trendline Graph" />
             </div>
           )}
-          {/* Display sentiment graph */}
-          <br />
-          <h2>Market Sentiments:</h2>
-          <p>Bank: {stockInfo}</p>
-          {sentimentGraph && (
-            <div className="sentiment-graph">
-              <img src={`/images/SG.${stockInfo}.NS.png`} alt="Sentiment Graph" />
-            </div>
-          )}
           {/* Display predictions table */}
           <div className="predictions">
             <h2>Prediction:</h2>
@@ -148,6 +139,15 @@ function Dashboard() {
               </tbody>
             </table>
           </div>
+          {/* Display sentiment graph */}
+          <br />
+          <h2>Market Sentiments:</h2>
+          <p>Bank: {stockInfo}</p>
+          {sentimentGraph && (
+            <div className="sentiment-graph">
+              <img src={`/images/SG.${stockInfo}.NS.png`} alt="Sentiment Graph" />
+            </div>
+          )}
           {/* Display news */}
           <div className="news">
             <h2>News Headlines:</h2>
