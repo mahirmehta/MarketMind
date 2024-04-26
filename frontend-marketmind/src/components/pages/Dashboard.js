@@ -124,16 +124,18 @@ function Dashboard() {
                   <th>LSTM close price</th>
                   <th>SARIMA close price</th>
                   <th className="average-column">Average price (MA)</th> {/* Add className here */}
+                  <th>Market close price</th>
                 </tr>
               </thead>
               <tbody>
                 {currentDateIndex !== -1 && predictions.slice(currentDateIndex - 7, currentDateIndex + 7).map((item, index) => (
                   <tr key={index}>
                     <td>{item.Date}</td>
-                    <td>{item.Arima_Close}</td>
-                    <td>{item.Lstm_Close}</td>
-                    <td>{item.Sarima_Close}</td>
-                    <td className="average-column">{item.Average_Close}</td> {/* Add className here */}
+                    <td>{item.Arima_Close.toFixed(2)}</td>
+                    <td>{item.Lstm_Close.toFixed(2)}</td>
+                    <td>{item.Sarima_Close.toFixed(2)}</td>
+                    <td className="average-column">{item.Average_Close.toFixed(2)}</td> {/* Add className here */}
+                    <td>{item.Market_Close}</td>
                   </tr>
                 ))}
               </tbody>
